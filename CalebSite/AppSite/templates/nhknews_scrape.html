@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NHK News</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+</head>
+<body>
+  <h1>
+    <p>NHK News Webscraping via python</p>
+  </h1>
+  <div class="links">
+      <button class="main_buttons" onclick="home()">Home</button>
+  </div>
+  <div class="main_container">
+    <div class="nav">
+      <button id = "firstBtn" class= "btn" onclick="showPanel(1)">Main News</button>
+      <button class= "btn" onclick="showPanel(2)">Featured News</button>
+      <button class= "btn" onclick="showPanel(3)">Society News</button>
+      <button class= "btn" onclick="showPanel(4)">Disaster News</button>
+      <button class= "btn" onclick="showPanel(5)">Politics News</button>
+      <button class= "btn" onclick="showPanel(6)">Business News</button>
+      <button class= "btn" onclick="showPanel(7)">International News</button>
+      <button class= "btn" onclick="showPanel(8)">Science News</button>
+      <button class= "btn" onclick="showPanel(9)">Sports News</button>
+      <button class= "btn" onclick="showPanel(10)">Life and Culture News</button>
+
+    </div>
+     <div class="sub_container">
+       <!-- Panels -->
+       <div id="panel1" class="panel">
+           <h2>Main News</h2>
+           <table>
+               <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Link</th>
+                </tr>
+               </thead>
+               <tbody>
+                    {% for title,link in main_news %}
+                    <tr>
+                        <td> {{ title }} </td>
+                        <td> <a style="color:yellow" href = "{{ link }}"> {{ link }} </a></td>
+                    </tr>
+                    {% endfor %}
+               </tbody>
+           </table>
+       </div>
+       <!-- Panels -->
+       <div id="panel2" class="panel">
+           <h2>Featured News</h2>
+           <table>
+               <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Link</th>
+                </tr>
+               </thead>
+               <tbody>
+                    {% for title,link in featured_news %}
+                    <tr>
+                        <td> {{ title }}</td>
+                        <td> <a style="color:yellow" href = "{{ link }}"> {{ link }} </a></td>
+                    </tr>
+                    {% endfor %}
+               </tbody>
+           </table>
+       </div>
+       <!-- Panels -->
+       <div id="panel3" class="panel">
+           <h2>Society News</h2>
+           <table>
+               <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Link</th>
+                </tr>
+               </thead>
+               <tbody>
+                    {% for title,link in society_news %}
+                    <tr>
+                        <td> {{ title }}</td>
+                        <td> <a style="color:yellow" href = "{{ link }}"> {{ link }} </a></td>
+                    </tr>
+                    {% endfor %}
+               </tbody>
+           </table>
+       </div>
+       <!-- Panels -->
+       <div id="panel4" class="panel">
+           <h2>Disaster News</h2>
+           <table>
+               <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Link</th>
+                </tr>
+               </thead>
+               <tbody>
+                    {% for title,link in disaster_news %}
+                    <tr>
+                        <td> {{ title }}</td>
+                        <td> <a style="color:yellow" href = "{{ link }}"> {{ link }} </a></td>
+                    </tr>
+                    {% endfor %}
+               </tbody>
+           </table>
+       </div>
+        <!-- Panels -->
+       <div id="panel5" class="panel">
+           <h2>Political News</h2>
+           <table>
+               <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Link</th>
+                </tr>
+               </thead>
+               <tbody>
+                    {% for title,link in political_news %}
+                    <tr>
+                        <td> {{ title }}</td>
+                        <td> <a style="color:yellow" href = "{{ link }}"> {{ link }} </a></td>
+                    </tr>
+                    {% endfor %}
+               </tbody>
+           </table>
+       </div>
+
+      <!-- Panels -->
+       <div id="panel6" class="panel">
+           <h2>Business News</h2>
+           <table>
+               <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Link</th>
+                </tr>
+               </thead>
+               <tbody>
+                    {% for title,link in business_news %}
+                    <tr>
+                        <td> {{ title }}</td>
+                        <td> <a style="color:yellow" href = "{{ link }}"> {{ link }} </a></td>
+                    </tr>
+                    {% endfor %}
+               </tbody>
+           </table>
+       </div>
+
+    <!-- Panels -->
+     <div id="panel7" class="panel">
+         <h2>International News</h2>
+         <table>
+             <thead>
+             <tr>
+                 <th>Title</th>
+                 <th>Link</th>
+             </tr>
+             </thead>
+             <tbody>
+                {% for title,link in international_news %}
+                    <tr>
+                        <td> {{ title }}</td>
+                        <td> <a style="color:yellow" href = "{{ link }}"> {{ link }} </a></td>
+                    </tr>
+                {% endfor %}
+             </tbody>
+         </table>
+     </div>
+
+       <!-- Panels -->
+       <div id="panel8" class="panel">
+           <h2>Science News</h2>
+           <table>
+               <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Link</th>
+                </tr>
+               </thead>
+               <tbody>
+                    {% for title,link in science_news %}
+                    <tr>
+                        <td> {{ title }}</td>
+                        <td> <a style="color:yellow" href = "{{ link }}"> {{ link }} </a></td>
+                    </tr>
+                    {% endfor %}
+               </tbody>
+           </table>
+       </div>
+
+      <!-- Panels -->
+       <div id="panel9" class="panel">
+           <h2>Sports News</h2>
+           <table>
+               <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Link</th>
+                </tr>
+               </thead>
+               <tbody>
+                    {% for title,link in sports_news %}
+                    <tr>
+                        <td> {{ title }}</td>
+                        <td> <a style="color:yellow" href = "{{ link }}"> {{ link }} </a></td>
+                    </tr>
+                    {% endfor %}
+               </tbody>
+           </table>
+       </div>
+
+      <!-- Panels -->
+       <div id="panel10" class="panel">
+           <h2>Life and Culture News</h2>
+           <table>
+               <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Link</th>
+                </tr>
+               </thead>
+               <tbody>
+                    {% for title,link in life_news %}
+                    <tr>
+                        <td> {{ title }}</td>
+                        <td> <a style="color:yellow" href = "{{ link }}"> {{ link }} </a></td>
+                    </tr>
+                    {% endfor %}
+               </tbody>
+           </table>
+       </div>
+    </div>
+
+  </div>
+
+  <!-- JS Script-->
+  <script type="text/javascript" src="{% static 'js/nhknews.js'%}"></script>
+</body>
+</html>

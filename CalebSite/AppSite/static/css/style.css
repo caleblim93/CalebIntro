@@ -1,0 +1,185 @@
+/* Mark background as grey */
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+
+}
+
+/* Set a specific font to a bigger size */
+p {
+    font-size: 20px;  /* Change this value as needed */
+    color: white;
+}
+
+h1 {
+    text-align: left; /* Centers the text horizontally */
+    font-size: 50px;
+    color: white;
+}
+
+h2 {
+    font-size: 30px;
+    color: white;
+}
+h3 {
+    font-size: 25px;
+    color: white;
+}
+
+.title_message{
+    margin-left: 40px;
+    background-color: rgba(0,0, 0, 0.3);
+    background-size: cover;
+
+}
+.main_buttons {
+    background-color: #007BFF; /* Primary blue color */
+    color: white;             /* White text color */
+    border: none;             /* Remove border */
+    border-radius: 5px;       /* Rounded corners */
+    padding: 10px 20px;       /* Add padding for size */
+    font-size: 16px;          /* Set font size */
+    font-weight: bold;        /* Make text bold */
+    cursor: pointer;          /* Show pointer on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+.main_buttons:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05);    /* Slightly enlarge on hover */
+}
+
+.main_buttons:active {
+    background-color: #004085; /* Even darker blue on click */
+    transform: scale(0.95);    /* Slightly shrink on click */
+}
+
+.main_buttons:focus {
+    outline: 2px solid #80bdff; /* Add focus outline for accessibility */
+    outline-offset: 2px;        /* Space between the outline and the button */
+}
+
+.links{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.main_container {
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      align-items: top;
+      justify-content: flex-start;
+      height: auto;
+      font-color: white;
+      margin-left: 40px;
+
+}
+.btn{
+    background-color: #007BFF; /* Primary blue color */
+    color: white;             /* White text color */
+    padding: 5px 5px;  /* Top/Bottom and Left/Right padding */
+    font-size: 2px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05);    /* Slightly enlarge on hover */
+}
+
+/* Highlighted (clicked) button style */
+        .highlighted {
+            background-color: #28a745;  /* Green */
+            border: 2px solid #155724;  /* Dark green border */
+        }
+
+.sub_container{
+       display: flex;
+       align-items: top;
+       /*background-color: rgba(82, 82, 245, 0.5);*/
+       background-color: rgba(0,0, 0, 0.5);
+       background-size: cover;
+}
+
+.intro {
+      margin-left: 40px;
+      text-align: left;
+      border-width: 10px;
+
+    }
+
+.image {
+      margin-right: 50px; /* Space between image and details */
+      margin-left: 40px;
+    }
+
+img {
+      width: 500px; /* Adjust image size */
+      height: 500;
+      border-radius: 10px; /* Optional: rounded corners */
+      border-width: 10px;
+      border-style: groove;
+      border-color: darkred;
+    }
+
+ul {
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      padding: 0;
+      margin: 0;
+      color: white;
+      font-size: 20px;  /* Change this value as needed */
+    }
+
+.inline-list {
+      list-style-type: none;  /* Remove bullets */
+      padding: 0;
+      margin: 0;
+    }
+
+.inline-list li {
+      display: inline;  /* Display items inline */
+    }
+
+/* Add comma after each list item except the last one */
+.inline-list li:not(:last-child)::after {
+      content: ", ";  /* Add comma and space */
+    }
+
+
+.nav {
+    margin-bottom: 20px;
+}
+
+.nav button {
+    width: calc(33.33% - 10px)
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.panel {
+    display: none;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.panel.active {
+    display: block;
+}
+
+table {
+    width: 100%;
+    margin: 10px;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    line-height: 2;
+    color: white;
+}

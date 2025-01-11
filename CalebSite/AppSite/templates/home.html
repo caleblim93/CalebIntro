@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+    <head>
+        <title>
+            Caleb Homepage
+        </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+    </head>
+    <body>
+        <h1>
+            <p>Welcome to My Homepage</p>
+        </h1>
+        <div class="title_message">
+            <p>Hi, I am Lim Hock Ming, or you can just call me Caleb.</p>
+            <p>This web serves to demonstrates and showcase my skillset in a glance.</p>
+            <div class="links">
+                <button class='main_buttons' onclick="experience()">My Experience</button>
+                <button class='main_buttons' onclick="nhknews()">My Projects</button>
+            </div>
+        </div>
+             <div class="main_container">
+                 <div class="sub_container">
+                    <div class="image">
+                        <img src="{% static 'myself.jpeg'%}" alt="Placeholder Image">
+                    </div>
+                     <div class="intro">
+                         <h2>About me: </h2>
+                         <p>Name: {{ name }}</p>
+                         <p>Nickname: {{ nick }}</p>
+                         <p>Age: {{ age }}</p>
+                         <p>DOB: {{ DOB}}</p>
+                         <p>Skills that I am familiar with:</p>
+                         <ul class="inline-list">
+                             {% for skill in skills%}
+                             <li> {{ skill }} </li>
+                             {% endfor %}
+                         </ul>
+                         <p>Languages</p>
+                          <ul class="inline-list">
+                             {% for language in languages %}
+                             <li> {{ language }} </li>
+                             {% endfor %}
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="sub_container">
+                     <div class="intro">
+                         <h2>Details</h2>
+                         <p>I am a self motivated QA engineer who is capable to do both manual and automation QA</p>
+                         <p>During my free time, I watch netflix, game and sometimes learn new skills such as developing this website! </p>
+                     </div>
+                 </div>
+
+             </div>
+        <!-- JS Script-->
+         <script type="text/javascript" src="{% static 'js/main.js'%}"></script>
+    </body>
+</html>

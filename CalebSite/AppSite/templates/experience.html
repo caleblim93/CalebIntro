@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+    <head>
+        <title>
+            Caleb Homepage
+        </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+    </head>
+    <body>
+        <h1>
+            <p>Work Experience</p>
+        </h1>
+        <div class="links">
+                <button class="main_buttons" onclick="home()">Home</button>
+        </div>
+        <div class="main_container">
+            <div class="nav">
+                <button id='firstBtn' class='btn' onclick="showPanel(1)">2023-Present</button>
+                <button class='btn' onclick="showPanel(2)">2020-2023</button>
+                <button class='btn' onclick="showPanel(3)">2019-2020</button>
+                <button class='btn' onclick="showPanel(4)">2017-2018</button>
+                <button class='btn' onclick="showPanel(5)">2015-2017</button>
+            </div>
+            <div class="sub_container">
+                <!-- Panels -->
+                <div id="panel1" class="panel">
+                    <h2>Mercari Inc (Japan) - Software QA Engineer</h2>
+                    <h3>Responsibilities/Achievements</h3>
+                    <p>Write backend automation with in house tools.</p>
+                    <p>Successfully saving millions of yen in costing for automation written.</p>
+                    <p>Write and Execute Test Cases for multiple projects.</p>
+                    <p>Actively participate in project requirement gathering planning and give QA point of view.</p>
+                    <p>QA process enhancement support.</p>
+
+                </div>
+                <div id="panel2" class="panel" style="display: none;">
+                    <h2>PRO IT (Malaysia) - QA Lead</h2>
+                    <h3>Responsibilities/Achievements</h3>
+                    <p>Successfully setup automation process in API Testing for company using Jenkins CI/CD.</p>
+                    <p>Write automation test code to test API and ensure their responses are correct.</p>
+                    <p>Load/Stress Testing System using Jmeter.</p>
+                    <p>Full E2E testing (Manual + Automation).</p>
+                    <p>Lead a team of 10 people in company.</p>
+                    <p>Setup QA process from scratch for the team.</p>
+                </div>
+                <div id="panel3" class="panel" style="display: none;">
+                    <h2>Resourceleap Consultancy (Malaysia) - Senior Test Executive</h2>
+                    <h3>Responsibilities/Achievements</h3>
+                    <p>QA lead for Agile Team of 5.</p>
+                    <p>Responsible to design and write a guideline to create Test Cases/Test Scenarios for teammates.</p>
+                    <p>In charge in general direction for both Automation Testing and Load Testing technology.</p>
+                    <p>Responsible to teach and guide teammate in doing API Testing, Load Testing, and Automation Testing tools</p>
+                    <p>Prepare Test Plan for each release.</p>
+                </div>
+                <div id="panel4" class="panel" style="display: none;">
+                    <h2>Pactera Malaysia Inc (Malaysia) - Associate Test Analyst</h2>
+                    <h3>Responsibilities/Achievements</h3>
+                    <p>Responsible to understand client's requirement and write Test Cases accordingly.</p>
+                    <p>Responsible to use HP ALM tool to write, update and record each and every test case executed.</p>
+                    <p>Responsible to do intensive testing for each patch/program before going live.</p>
+                </div>
+                <div id="panel5" class="panel" style="display: none;">
+                    <h2>Silverlake(Malaysia) - Programmer</h2>
+                    <h3>Responsibilities/Achievements</h3>
+                    <p>Responsible to write programs in AS400 system according to client's requirement.</p>
+                    <p>Responsible to do functional testing for each program written.</p>
+                    <p>Successfully convert existing AS400 programs into Java Programs.</p>
+                    <p>Successfully design database architecture for the project.</p>
+                    <p>Involved in Crowdfunding project and Bank Project.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- JS Script-->
+         <script type="text/javascript" src="{% static 'js/main.js'%}"></script>
+    </body>
+</html>
