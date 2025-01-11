@@ -36,7 +36,6 @@ def main(news,soup):
         main_titles.extend(tertiary_titles)
         main_links.extend(tertiary_links)
 
-        print(f'Main titles length: {len(main_titles)}')
         return format_titles_links(main_titles,main_links)
 
     elif news.lower() == 'featured':
